@@ -181,7 +181,7 @@ body {
           <div class="msg-info-time"></div>
         </div>
 
-        <div class="msg-text">物販支援システムをご利用頂き、誠にありがとうございます。楽天市場のユーザを対象に期間限定のクーポンを発行させて頂いておりますので、良かったらお買物の際にご利用ください。<BR><BR><a href="https://coupon.rakuten.co.jp/getCoupon?getkey=Q1BaWi1QSzA2LUFDWkYtUFlXNw--">クーポンを獲得する</a><BR><BR>気になる商品がございましたら、商品番号（数字2桁）を教えてください！</div>
+        <div class="msg-text">物販支援システムをご利用頂き、誠にありがとうございます。楽天市場のユーザを対象に期間限定のクーポンを発行させて頂いておりますので、良かったらお買物の際にご利用ください。<BR><BR><a href="https://coupon.rakuten.co.jp/getCoupon?getkey=Q1BaWi1QSzA2LUFDWkYtUFlXNw--">クーポンを獲得する</a><BR><BR>気になる商品がございましたら、商品番号を教えてください！</div>
       </div>
 
     </div>
@@ -223,7 +223,7 @@ const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
 const PRODUCT_CODES = [
-  "01"
+  "1"
 ];
 
 // Icons made by Freepik from www.flaticon.com
@@ -282,7 +282,7 @@ function botResponse(product_manage_code) {
   if (PRODUCT_CODES.includes(product_manage_code))
 
   {
-    if (product_manage_code == "01")
+    if (product_manage_code == "1")
     {
     var msgText ="01番の商品が見つかりました。URLをクリックすると、より詳細な情報が表示されます。<BR><BR><BR>"
     msgText += "<img src='https://image.rakuten.co.jp/blackscorpion-store/cabinet/glass_film_01.jpg' width=150 height=150><BR><BR><BR>"
