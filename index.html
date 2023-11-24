@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
 
@@ -180,7 +181,7 @@ body {
           <div class="msg-info-time"></div>
         </div>
 
-        <div class="msg-text">ライブ配信のご視聴ありがとうございます。気になる商品がございましたら、商品番号を教えてください！</div>
+        <div class="msg-text">ライブ配信を視聴頂き、ありがとうございました。気になる商品がございましたら、商品番号を教えてください！</div>
       </div>
 
     </div>
@@ -326,7 +327,7 @@ function botResponse(product_manage_code) {
 
   if (PRODUCT_CODES.includes(product_manage_code))
   {
-    var msgText = "入力頂いた商品が見つかりました。<BR><a href='https://item.rakuten.co.jp/blackscorpion-store/blasco-" + product_manage_code + "/'>楽天市場店でみる</a>"
+    var msgText = "入力頂いた商品が見つかりました。<BR><a id='answer' href='https://item.rakuten.co.jp/blackscorpion-store/blasco-" + product_manage_code + "/'>楽天市場店でみる</a>"
   }
   else
   {
