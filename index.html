@@ -181,7 +181,7 @@ body {
           <div class="msg-info-time"></div>
         </div>
 
-        <div class="msg-text">物販支援システムをご利用頂き、誠にありがとうございます。楽天市場のユーザを対象に期間限定のクーポンを発行させて頂いておりますので、良かったらお買物の際にご利用ください。<BR><BR><a href="https://coupon.rakuten.co.jp/getCoupon?getkey=Q1BaWi1QSzA2LUFDWkYtUFlXNw--">クーポンを獲得する</a><BR><BR>気になる商品がございましたら、商品番号を教えてください！</div>
+        <div class="msg-text">物販支援システムをご利用頂き、誠にありがとうございます。楽天市場のユーザを対象に期間限定のクーポンを発行させて頂いておりますので、良かったらお買物の際にご利用ください。<BR><BR><a href="https://coupon.rakuten.co.jp/getCoupon?getkey=VjBYMC0wV0s1LVJSWkktRkZBWA--&rt=">クーポンを獲得する</a><BR><BR>気になる商品がございましたら、商品番号(01~47)を教えてください！</div>
       </div>
 
     </div>
@@ -223,7 +223,53 @@ const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
 const PRODUCT_CODES = [
-  "1"
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24",
+  "25",
+  "26",
+  "27",
+  "28",
+  "29",
+  "30",
+  "31",
+  "32",
+  "33",
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47"
 ];
 
 // Icons made by Freepik from www.flaticon.com
@@ -282,22 +328,11 @@ function botResponse(product_manage_code) {
   if (PRODUCT_CODES.includes(product_manage_code))
 
   {
-    if (product_manage_code == "1")
-    {
-    var msgText ="マッチする商品が見つかりました。URLをクリックすると、より詳細な情報が表示されます。<BR><BR><BR>"
-    msgText += "<img src='https://image.rakuten.co.jp/blackscorpion-store/cabinet/glass_film_01.jpg' width=150 height=150><BR><BR><BR>"
-    msgText += "<a href='https://item.rakuten.co.jp/blackscorpion-store/blasco-0001/'>楽天市場</a><BR>"
-    msgText += "<a href='https://www.amazon.co.jp/dp/B0CMZQ25BM?ref=myi_title_dp'>Amazon</a><BR>"
-    msgText += "<a href='https://store.shopping.yahoo.co.jp/nana-general-store/product0061.html'>ヤフーショッピング</a><BR>"
-    msgText += "<a href='https://jp.mercari.com/shops/product/xp8gCnPKc8R3XkzKT7vFNc?source=shop_page_for_seller&_gl=1*1tnp9d0*_gcl_aw*R0NMLjE2OTc2MTQ0NzQuQ2owS0NRandoTDZwQmhEakFSSXNBR3g4RDU4aWg5LWVDRmU1X0cxckF6QzhLWnR4ZU41eGxET0k5TGxmTWQ2bU1GZmY1dTNNOHZBemxkZ2FBaElrRUFMd193Y0I.*_gcl_au*MjAyOTExNzc2Ny4xNjk4MDYxNDI1*_ga*ODMxMDgzNjg0LjE2NzE0NDYxNzg.*_ga_4NLR7T2LEN*MTcwMDgyODA4NC4xOTIuMC4xNzAwODI4MDkyLjUyLjAuMA..'>メルカリShops</a><BR>"
-    msgText += "<a href='https://www.qoo10.jp/item/IPHONE-%e3%82%ac%e3%83%a9%e3%82%b9%e3%83%95%e3%82%a3%e3%83%ab%e3%83%a0-%e5%85%a8%e9%9d%a2%e4%bf%9d%e8%ad%b7-%e3%82%af%e3%83%aa%e3%82%a2-IPHONE13-IPHONE13-PRO-IPHONE14-IPHONE14/1071534440?ga_priority=-1&ga_prdlist=sellergoods'>Qoo10</a><BR>" 
+    var msgText = "<a href='https://item.rakuten.co.jp/blackscorpion-store/blasco-00" + product_manage_code + "/'>商品を楽天市場店でみる</a>"
   }
-
-  }
-
-        else
+  else
   {
-    var msgText = "未登録の商品番号が入力されました。確認のうえ改めてご入力ください。"
+    var msgText = "存在しない商品番号が入力されました。確認のうえ改めてご入力ください。"
   }
 
   setTimeout(() => {
